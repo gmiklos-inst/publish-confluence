@@ -10,4 +10,4 @@ if ! [ -z "$INPUT_DOCSDIR" ]; then
 fi
 
 make confluence \
-  SPHINXOPTS="-D confluence_server_user=$INPUT_USERNAME -D confluence_server_pass=$INPUT_APITOKEN"
+  SPHINXOPTS="-D confluence_server_user=$INPUT_USERNAME -D confluence_server_pass=$INPUT_APITOKEN -D confluence_publish=True -D confluence_server_url=$INPUT_SERVERURL -D confluence_space_name=$INPUT_SPACENAME -D confluence_parent_page=$INPUT_PARENTPAGE"
